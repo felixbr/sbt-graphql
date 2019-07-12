@@ -3,13 +3,13 @@ organization := "rocks.muki"
 sbtPlugin := true
 enablePlugins(SbtPlugin)
 
-val circeVersion = "0.9.3"
-val catsVersion = "1.4.0"
+val circeVersion = "0.12.0-M4"
+val catsVersion = "2.0.0-M4"
 libraryDependencies ++= Seq(
   "org.sangria-graphql" %% "sangria" % "1.4.2",
-  "org.sangria-graphql" %% "sangria-circe" % "1.2.1",
+  //"org.sangria-graphql" %% "sangria-circe" % "1.2.1",
   "io.circe" %% "circe-core" % circeVersion,
-  "io.circe" %% "circe-parser" % circeVersion,
+  "io.circe" %% "circe-jackson28" % circeVersion,
   "org.typelevel" %% "cats-core" % catsVersion,
   "org.typelevel" %% "cats-testkit" % catsVersion % Test,
   "org.scalaj" %% "scalaj-http" % "2.3.0",
